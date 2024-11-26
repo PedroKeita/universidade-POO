@@ -1,11 +1,20 @@
-public class Aluno {
-    private int matricula;
+public class Aluno extends Pessoa {
+    private String matricula;
 
-    public Aluno(int matricula) {
+    public Aluno(String cpf, String nome, int idade, String matricula) {
+        super(cpf,nome,idade);
+        this.matricula = matricula;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
     public void pagarMensalidade(){
-    System.out.println(matricula+ "(aluno) pagou a mensalidade");
+    System.out.println(matricula+ "Aluno" + getNome() + " pagou a mensalidade");
     }
 }
